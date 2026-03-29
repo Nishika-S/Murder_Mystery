@@ -9,20 +9,36 @@
 <div class="container">
   <h2>📚 Library</h2>
 
-  <p>
-    You find a marked book. A single word is underlined:
-  </p>
+  <p>A book has been checked out and returned the night of the murder: "The Art of Poisonous Plants."</p>
 
-  <h2>“JEALOUS”</h2>
+  <p>The library log shows the borrower's ID was scratched out — but the timestamp reads 9:47 PM. The professor died between 9 and 11 PM.</p>
 
-  <p>
-    🧍 Evidence: One suspect was emotionally unstable.
-  </p>
+  <p>A bookmark inside marks a page on Oleander extract — odorless, tasteless, deadly.</p>
 
-  <p>
-    ➡️ Go where broken hearts rest.
-  </p>
+  <p><strong>🧩 Evidence Collected:</strong> The murder weapon was likely poison. Someone researched it the night of the murder.</p>
+
+  <hr>
+
+  <p><strong>🔍 Next Clue Riddle:</strong> Go where students fuel their gossip and their hunger.</p>
+
+  <input type="text" id="cafeteriaAnswer" placeholder="Enter your answer">
+  <button onclick="checkCafeteria()">Submit Answer</button>
+  <p id="cafeteriaResult"></p>
 </div>
+
+<script>
+function checkCafeteria() {
+  const answer = document.getElementById('cafeteriaAnswer').value.toLowerCase();
+  const resultElement = document.getElementById('cafeteriaResult');
+  
+  if (answer.includes('cafeteria') || answer.includes('canteen')) {
+    resultElement.innerHTML = '✅ Correct! Head to the Cafeteria.';
+  } else {
+    resultElement.innerHTML = '❌ Wrong. Try again.';
+    window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+  }
+}
+</script>
 
 </body>
 </html>

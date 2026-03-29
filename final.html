@@ -4,26 +4,123 @@
   <title>Final Decision</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
+  <style>
+    .suspect-card {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 10px auto;
+      max-width: 600px;
+      text-align: left;
+      color: #111;
+    }
+    .suspect-card strong {
+      color: #cc0000;
+      font-size: 17px;
+    }
+    .suspect-card p {
+      color: #333;
+      font-size: 15px;
+      margin: 4px 0 0 0;
+    }
+    .verdict-form {
+      max-width: 600px;
+      margin: 30px auto;
+      text-align: left;
+    }
+    .verdict-form label {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #ff3b3b;
+      font-size: 16px;
+    }
+    .verdict-form select,
+    .verdict-form input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #444;
+      background: #1a1a1a;
+      color: #f5f5f5;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+    .verdict-form select option {
+      background: #1a1a1a;
+      color: #f5f5f5;
+    }
+    .verdict-form button {
+      display: block;
+      width: 100%;
+      margin-top: 24px;
+      padding: 14px;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+    #result {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 16px;
+      border-radius: 8px;
+      font-size: 17px;
+      text-align: left;
+    }
+    .section-title {
+      color: #aaa;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 30px 0 10px;
+    }
+  </style>
 </head>
 <body>
 
 <div class="container">
-  <h2>⚖️ Final Decision</h2>
+  <h2>⚖️ Final Verdict</h2>
 
-  <p>Who is the killer?</p>
+  <p>You have gathered all the evidence. The truth is within reach. Choose carefully — only one answer is correct.</p>
 
-  <select id="killer">
-    <option value="alex">Alex (Best Friend)</option>
-    <option value="maya">Maya (Ex)</option>
-    <option value="jordan">Jordan (Rival)</option>
-    <option value="sam">Sam (Quiet One)</option>
-  </select>
+  <p class="section-title">The Suspects</p>
 
-  <p>Why?</p>
-  <input type="text" id="motive" placeholder="Enter motive">
+  <div class="suspect-card">
+    <strong>Victor Hale — The Dean</strong>
+    <p>Threatened Blackwell over corruption files. Powerful, calculated, and desperate to protect his reputation.</p>
+  </div>
 
-  <br>
-  <button onclick="checkFinal()">Submit</button>
+  <div class="suspect-card">
+    <strong>Lena Cross — The Student</strong>
+    <p>Failed her thesis under Blackwell's watch. A personal grudge — but was it enough to kill?</p>
+  </div>
+
+  <div class="suspect-card">
+    <strong>Dr. Rafi Osman — The Colleague</strong>
+    <p>Blackwell stole full credit for their co-authored book. Years of resentment, quietly building.</p>
+  </div>
+
+  <div class="suspect-card">
+    <strong>Mrs. Doyle — The Housekeeper</strong>
+    <p>She overheard something she was never meant to hear. A witness — or something more?</p>
+  </div>
+
+  <div class="verdict-form">
+    <label for="killer">Who is the killer?</label>
+    <select id="killer">
+      <option value="">-- Select a suspect --</option>
+      <option value="victor">Victor Hale (The Dean)</option>
+      <option value="lena">Lena Cross (The Student)</option>
+      <option value="rafi">Dr. Rafi Osman (The Colleague)</option>
+      <option value="doyle">Mrs. Doyle (The Housekeeper)</option>
+    </select>
+
+    <label for="motive">What was the motive?</label>
+    <input type="text" id="motive" placeholder="Describe the motive in your own words...">
+
+    <button onclick="checkFinal()">Submit Verdict</button>
+  </div>
 
   <p id="result"></p>
 </div>

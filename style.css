@@ -72,3 +72,58 @@ code {
   font-size: 20px;
   color: #00ffcc;
 }
+
+blockquote {
+  border-left: 4px solid #ff3b3b;
+  margin: 20px auto;
+  padding: 12px 20px;
+  background: rgba(255, 59, 59, 0.08);
+  font-style: italic;
+  color: #ffcccc;
+  max-width: 600px;
+  text-align: left;
+  border-radius: 4px;
+}
+
+.evidence {
+  background: rgba(0, 255, 100, 0.07);
+  border: 1px solid #00ff64;
+  border-radius: 8px;
+  padding: 14px 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  color: #aaffcc;
+  text-align: left;
+}
+
+.riddle {
+  background: rgba(255, 200, 0, 0.07);
+  border: 1px solid #ffd700;
+  border-radius: 8px;
+  padding: 14px 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  color: #ffe680;
+  text-align: left;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 30px auto;
+  max-width: 400px;
+}
+
+.suspect-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin: 10px auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.suspect-card strong {
+  color: #ff3b3b;
+}
