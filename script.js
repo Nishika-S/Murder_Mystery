@@ -15,24 +15,4 @@ function checkBinary() {
   }
 }
 
-function checkFinal() {
-  let choice = document.getElementById("killer").value;
-  let resultElement = document.getElementById("result");
-
-  if (choice === "rafi") {
-    resultElement.innerHTML =
-      "🎉 CORRECT! Dr. Rafi Osman poisoned Professor Blackwell's coffee using Oleander extract. Blackwell had stolen full credit for their co-authored book — and Rafi had finally had enough.";
-  } else if (choice === "victor") {
-    resultElement.innerHTML =
-      "❌ Close — Victor Hale threatened Blackwell, but threats aren't murder. He was protecting himself, not killing.";
-  } else if (choice === "lena") {
-    resultElement.innerHTML =
-      "❌ Lena had a grudge, but no access to the poison and no key.";
-  } else if (choice === "doyle") {
-    resultElement.innerHTML =
-      "❌ Mrs. Doyle heard too much — but she was a witness, not the killer.";
-  } else {
-    resultElement.innerHTML =
-      "⚠️ Please select a suspect and provide a motive.";
-  }
 }
