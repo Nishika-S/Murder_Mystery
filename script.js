@@ -14,5 +14,3 @@ function checkBinary() {
       "❌ Wrong password. Try again.";
   }
 }
-
-}
